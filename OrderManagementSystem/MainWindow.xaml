@@ -6,9 +6,16 @@
         xmlns:local="clr-namespace:OrderManagementSystem"
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="1000">
-    <Grid x:Name="dataGrid_Tilaus">
+    <Grid x:Name="dataGrid_Tilaus" Margin="0,0,483.6,0.4">
+
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="241" Margin="533,7,-474,0" VerticalAlignment="Top" Width="451"/>
+
+        <DataGrid x:Name="dataGrid_TuoteTiedot" HorizontalAlignment="Left" Height="200" Margin="533,1,-474,0" VerticalAlignment="Top" Width="451" />
+
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="600" Margin="0,10,0,0" VerticalAlignment="Top" Width="500"/>
+
         <TextBox HorizontalAlignment="Left" Height="23" Margin="1022,45,-348.4,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtTilausNumero" HorizontalAlignment="Left" Height="46" Margin="41,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
+        <TextBox x:Name="txtTilausNumero" HorizontalAlignment="Left" Height="46" Margin="41,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151" TextChanged="TxtTilausNumero_TextChanged"/>
         <TextBox x:Name="txtAsiakasNumero" HorizontalAlignment="Left" Height="46" Margin="41,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
         <TextBox x:Name="txtAsiakasNimi" HorizontalAlignment="Left" Height="42" Margin="41,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221"/>
         <TextBox x:Name="txtOsoite" HorizontalAlignment="Left" Height="40" Margin="41,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221"/>
@@ -21,6 +28,16 @@
         <Label x:Name="lblToimitusOsoite" Content="ToimitusOsoite" HorizontalAlignment="Left" Height="26" Margin="41,252,0,0" VerticalAlignment="Top" Width="187" IsEnabled="False"/>
         <Label x:Name="lblTilausPäivämäärä" Content="TilausPäivämäärä" HorizontalAlignment="Left" Height="26" Margin="41,334,0,0" VerticalAlignment="Top" Width="187" IsEnabled="False"/>
         <Label x:Name="lblToimitusPäivämäärä" Content="ToimitusPäivämäärä" HorizontalAlignment="Left" Height="26" Margin="41,418,0,0" VerticalAlignment="Top" Width="187" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="773,201,-383,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtTuoteNimi" HorizontalAlignment="Left" Height="46" Margin="797,45,-474,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="187"/>
+        <TextBox x:Name="txtTuoteNumero" HorizontalAlignment="Left" Height="49" Margin="543,42,-217,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="184"/>
+        <TextBox x:Name="txtMaara" HorizontalAlignment="Left" Height="37" Margin="568,133,-131,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="txtAHinta" HorizontalAlignment="Left" Height="37" Margin="690,133,-270,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="90"/>
+        <Button x:Name="BtnLisääRivi" Content="" HorizontalAlignment="Left" Height="34" Margin="818,136,-443,0" VerticalAlignment="Top" Width="135" Click="BtnLisääRivi_Click"/>
+        <Label x:Name="lblTuoteNumero" Content="TuoteNumero" HorizontalAlignment="Left" Height="27" Margin="543,10,-217,0" VerticalAlignment="Top" Width="184"/>
+        <Label x:Name="lblTuoteNImi" Content="TuoteNimi" HorizontalAlignment="Left" Height="34" Margin="808,11,-443,0" VerticalAlignment="Top" Width="145"/>
+        <Label x:Name="lblMaara" Content="Määrä" HorizontalAlignment="Left" Height="35" Margin="543,91,-131,0" VerticalAlignment="Top" Width="98"/>
+        <DataGrid x:Name="dgTilausRivit" HorizontalAlignment="Left" Height="409" Margin="533,229,-474,0" VerticalAlignment="Top" Width="451"/>
 
     </Grid>
 </Window>
